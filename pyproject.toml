@@ -19,7 +19,7 @@ classifiers = [
 
 [project.optional-dependencies]
 yaml = ["PyYAML>=6.0"]
-test = ["pytest>=7.0"]
+test = ["pytest>=9.2.0"]
 
 [project.scripts]
 memcore = "memcore.cli:main"
