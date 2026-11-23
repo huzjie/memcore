@@ -1,0 +1,3 @@
+# memcore
+
+see INTRO.md
