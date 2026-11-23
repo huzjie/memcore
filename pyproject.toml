@@ -18,7 +18,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-yaml = ["PyYAML>=6.0"]
+yaml = ["PyYAML>=6.0.3"]
 test = ["pytest>=7.0"]
 
 [project.scripts]
