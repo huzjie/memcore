@@ -1,0 +1,12 @@
+# 个人助理：重偏好召回，写入门控放宽
+llm:
+  provider: mock
+store:
+  url: json://memory.json
+gate:
+  enabled: true
+  threshold: 0.40
+forget:
+  max_items: 5000
+working:
+  capacity: 24

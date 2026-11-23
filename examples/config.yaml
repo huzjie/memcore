@@ -1,0 +1,11 @@
+llm:
+  provider: mock
+store:
+  url: memory://
+gate:
+  enabled: true
+  threshold: 0.45
+forget:
+  max_items: 10000
+working:
+  capacity: 16

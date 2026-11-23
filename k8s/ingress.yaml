@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: memcore
+  namespace: memcore
+spec:
+  rules:
+    - host: memcore.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: memcore
+                port:
+                  number: 8080

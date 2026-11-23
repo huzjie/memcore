@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: memcore-config
+  namespace: memcore
+data:
+  config.yaml: |
+    llm:
+      provider: mock
+    store:
+      url: json:///data/memory.json
+    gate:
+      enabled: true
+    forget:
+      max_items: 100000

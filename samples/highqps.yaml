@@ -1,0 +1,11 @@
+# 高并发：内存后端，关闭巩固，最低延迟
+llm:
+  provider: mock
+store:
+  url: memory://
+gate:
+  enabled: false
+forget:
+  max_items: 10000
+working:
+  capacity: 32

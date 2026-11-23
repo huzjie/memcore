@@ -1,0 +1,15 @@
+# 企业知识库：重检索，SQLite 持久化，大批量
+llm:
+  provider: openai
+  endpoint: https://gateway.example.com
+  api_key: ${OPENAI_API_KEY}
+  model: gpt-4o-mini
+store:
+  url: sqlite:///data/memory.db
+gate:
+  enabled: true
+  threshold: 0.50
+forget:
+  max_items: 1000000
+working:
+  capacity: 16

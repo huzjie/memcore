@@ -1,0 +1,12 @@
+llm:
+  provider: openai
+  endpoint: https://your-gateway.example.com
+  api_key: sk-xxx
+  model: gpt-4o-mini
+store:
+  url: sqlite://memory.db
+gate:
+  enabled: true
+  threshold: 0.45
+forget:
+  max_items: 100000

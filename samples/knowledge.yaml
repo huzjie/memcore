@@ -1,0 +1,12 @@
+# 知识沉淀：关闭遗忘，最大化保留
+llm:
+  provider: mock
+store:
+  url: sqlite://knowledge.db
+gate:
+  enabled: true
+  threshold: 0.45
+forget:
+  max_items: 10000000
+working:
+  capacity: 8

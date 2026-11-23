@@ -1,0 +1,5 @@
+memcore 已部署。
+
+  1. 健康检查: kubectl get svc {{ include "memcore.fullname" . }}
+  2. 端口转发: kubectl port-forward svc/{{ include "memcore.fullname" . }} 8080:8080
+  3. 测试: curl http://localhost:8080/health

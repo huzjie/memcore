@@ -1,0 +1,6 @@
+apiVersion: v2
+name: memcore
+description: 记忆原生 Agent 记忆内核
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

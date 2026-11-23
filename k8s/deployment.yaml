@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memcore
+  namespace: memcore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memcore
+  template:
+    metadata:
+      labels:
+        app: memcore
+    spec:
+      containers:
+        - name: memcore
+          image: memcore:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: config
+              mountPath: /app/config.yaml
+              subPath: config.yaml
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: config
+          configMap:
+            name: memcore-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: memcore-pvc

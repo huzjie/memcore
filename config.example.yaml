@@ -1,0 +1,20 @@
+# memcore 配置示例：复制为 config.yaml 后按需修改
+llm:
+  provider: mock            # mock | openai
+  # provider: openai 时填写以下三项
+  endpoint: ""              # OpenAI 兼容网关，如 https://api.openai.com
+  api_key: ""               # 你的 key
+  model: gpt-4o-mini
+
+store:
+  url: memory://            # memory:// | json://memory.json | sqlite://memory.db
+
+gate:
+  enabled: true             # 是否启用写入门控（重要度不足不写长期记忆）
+  threshold: 0.45
+
+forget:
+  max_items: 10000          # 超过则触发预算淘汰
+
+working:
+  capacity: 16              # 快记忆（工作记忆）容量

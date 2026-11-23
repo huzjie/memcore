@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  memcore:
+    build: .
+    image: memcore:latest
+    container_name: memcore
+    ports:
+      - "8080:8080"
+    environment:
+      - MEMCORE_STORE_URL=json:///data/memory.json
+    volumes:
+      - memcore-data:/data
+    restart: unless-stopped
+
+volumes:
+  memcore-data:

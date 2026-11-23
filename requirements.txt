@@ -1,0 +1,2 @@
+# memcore 核心零第三方依赖，仅可选 yaml / 测试
+PyYAML>=6.0
